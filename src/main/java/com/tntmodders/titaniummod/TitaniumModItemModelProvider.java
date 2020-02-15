@@ -25,7 +25,7 @@ public class TitaniumModItemModelProvider extends ItemModelProvider {
     protected void simpleItem(Item item) {
         ResourceLocation name = item.getRegistryName();
         Objects.requireNonNull(name);
-        singleTexture(name.getPath(), mcLoc(ITEM_FOLDER + "/generated"), new ResourceLocation(name.getNamespace(), ITEM_FOLDER + "/" + name.getPath()));
+        singleTexture(name.getPath(), mcLoc(ITEM_FOLDER + "/generated"), "layer0", new ResourceLocation(name.getNamespace(), ITEM_FOLDER + "/" + name.getPath()));
     }
 
     protected void simpleBlockItem(Block block) {
