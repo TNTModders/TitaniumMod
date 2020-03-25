@@ -16,17 +16,13 @@ import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-// 「META-INF/mods.toml」に記載されたMOD IDと一致する必要がある。
 @Mod(TitaniumMod.MOD_ID)
 public class TitaniumMod {
     public static final String MOD_ID = "titaniummod";
-    /**
-     * ロガーのインスタンス。
-     */
     private static final Logger LOGGER = LogManager.getLogger();
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents {
+    public static class RegistryEventSubscriber {
         @SubscribeEvent
         public static void registerBlocks(final RegistryEvent.Register<Block> event) {
             event.getRegistry().registerAll(Blocks.TITANIUM_BLOCK);
