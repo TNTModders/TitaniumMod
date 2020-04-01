@@ -1,7 +1,6 @@
 {
     "pack": {
-        "description": "Titanium Mod Resources",
         "pack_format": 4,
-        "_comment": "Resources for Titanium Mod"
+        "description": "Titanium Mod Resources"
     }
 }

@@ -1,50 +1,20 @@
-# MODの情報を記載するためのTOMLファイル。
-# TOMLについて詳しくはこちら：https://github.com/toml-lang/toml
-# MODを読み込む方法の名前。@Modによる読み込みは「javafml」。
-modLoader="javafml" # 必須
-# 読み込み方法のバージョン。@Modによる読み込みならForgeと同一。
-loaderVersion="[28,)" # 必須 (28 is current forge version)
-# MODの不具合を報告する先として表示されるURL。
-issueTrackerURL="https://www.tntmodders.com" # 任意
-[[mods]] # 必須
-# MODのID。
-modId="titaniummod" # 必須
-# MODのバージョン。ビルド時に埋め込まれる形式がいくつか用意されている。
-version="${file.jarVersion}" # 必須
-# MODの表示名。
-displayName="Titanium Mod" # 必須
-# 更新情報が記載されたJSONファイルのURL。
-#updateJSONURL="http://myurl.me/" # 任意 TODO
-# MODのホームページのURL。
-displayURL="https://www.tntmodders.com" # 任意
-# ロゴファイルの場所。
-#logoFile="logo.png" # 任意 TODO
-# MODのクレジット。
-credits="TNT Modders" # 任意
-# MODの作者。
-authors="Akasata Nahama, Tom Kate" # 任意
-# MODの説明。この項目に限らず、文字列は複数行書ける。必須
-description='''
-This mod adds titanium to Minecraft world!
+modLoader = "javafml"
+loaderVersion = "[28,)"
+issueTrackerURL = "https://www.tntmodders.com/tutorial/"
 
-An example mod to show what you need to change.
-'''
-# 依存関係。
-[[dependencies.titaniummod]] # 任意
-    # 依存するMODのID。
-    modId="forge" # 必須
-    # 依存が必須か否か。任意なら「ordering」を指定する必要がある。
-    mandatory=true # 必須
-    # 依存するバージョンの範囲。
-    versionRange="[28,)" # 必須
-    # 読み込み順序の指定。依存が任意なら「BEFORE」か「AFTER」が必須。
-    ordering="NONE"
-    # 依存するSide。「BOTH」「CLIENT」「SERVER」のいずれか。
-    side="BOTH"
-# 他の依存関係も書ける。
+[[mods]]
+    modId = "titaniummod"
+    version = "${file.jarVersion}"
+    displayName = "Titanium Mod"
+    displayURL = "https://www.tntmodders.com/tutorial/"
+    logoFile = "logo.png"
+    credits = "TNT Modders"
+    authors = "Akasata Nahama, Tom Kate"
+    description = "This mod adds titanium to Minecraft world.\n\nAn example mod to show what you need to change."
+
 [[dependencies.titaniummod]]
-    modId="minecraft"
+    modId="forge"
     mandatory=true
-    versionRange="[1.14.4]"
+    versionRange="[28.2.0,)"
     ordering="NONE"
     side="BOTH"
