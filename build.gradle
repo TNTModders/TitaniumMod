@@ -63,6 +63,9 @@ dependencies {
 }
 
 jar {
+    compileJava {
+        options.encoding = 'UTF-8'
+    }
     manifest {
         attributes([
                 "Specification-Title"     : "Titanium Mod",
