@@ -16,7 +16,7 @@ public class TitaniumModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(TitaniumMod.Blocks.TITANIUM_BLOCK.get());
     }
 
-    public void simpleBlockWithItem(Block block) {
+    private void simpleBlockWithItem(Block block) {
         ModelFile model = cubeAll(block);
         simpleBlock(block, model);
         simpleBlockItem(block, model);
