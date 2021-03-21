@@ -4,6 +4,7 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -28,9 +29,9 @@ public class TitaniumMod {
     public static class Blocks {
         private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MOD_ID);
         public static final RegistryObject<Block> TITANIUM_BLOCK = BLOCKS.register("titanium_block", () -> new Block(AbstractBlock.Properties
-                .create(Material.IRON)
-                .setRequiresTool()
-                .hardnessAndResistance(5.0F, 6.0F)
+                .of(Material.METAL, MaterialColor.METAL)
+                .requiresCorrectToolForDrops()
+                .strength(5.0F, 6.0F)
                 .sound(SoundType.METAL)
                 .harvestTool(ToolType.PICKAXE)
                 .harvestLevel(1)
@@ -44,9 +45,9 @@ public class TitaniumMod {
     public static class Items {
         private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
         public static final RegistryObject<Item> TITANIUM_BLOCK = ITEMS.register("titanium_block", () -> new BlockItem(Blocks.TITANIUM_BLOCK.get(), new Item.Properties()
-                .group(ItemGroup.BUILDING_BLOCKS)));
+                .tab(ItemGroup.TAB_BUILDING_BLOCKS)));
         public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", () -> new Item(new Item.Properties()
-                .group(ItemGroup.MATERIALS)));
+                .tab(ItemGroup.TAB_MATERIALS)));
 
         public static void register(IEventBus eventBus) {
             ITEMS.register(eventBus);

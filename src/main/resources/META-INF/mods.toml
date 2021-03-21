@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[35,)"
+loaderVersion = "[36,)"
 license = "The Unlicense"
 issueTrackerURL = "https://www.tntmodders.com/tutorial/"
 
@@ -7,7 +7,7 @@ issueTrackerURL = "https://www.tntmodders.com/tutorial/"
 modId = "titaniummod"
 version = "${file.jarVersion}"
 displayName = "Titanium Mod"
-displayURL = "https://www.tntmodders.com/tutorial/"
+displayURL = "https://com.tntmodders.com/tutorial/"
 logoFile = "logo.png"
 credits = "TNT Modders"
 authors = "Akasata Nahama, Tom Kate"
@@ -16,13 +16,13 @@ description = "This mod adds titanium to the Minecraft world.\nThis is an exampl
 [[dependencies.titaniummod]]
 modId = "forge"
 mandatory = true
-versionRange = "[35,)"
+versionRange = "[36,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.titaniummod]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.16.4,1.17)"
+versionRange = "[1.16.5,1.17)"
 ordering = "NONE"
 side = "BOTH"
