@@ -1,4 +1,5 @@
 {
   "block.titaniummod.titanium_block": "Block of Titanium",
-  "item.titaniummod.titanium_ingot": "Titanium Ingot"
+  "item.titaniummod.titanium_ingot": "Titanium Ingot",
+  "itemGroup.titaniummod": "Titanium Mod"
 }

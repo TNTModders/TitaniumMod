@@ -9,6 +9,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -23,6 +24,12 @@ import java.util.Collection;
 @Mod(TitaniumMod.MOD_ID)
 public class TitaniumMod {
     public static final String MOD_ID = "titaniummod";
+    public static final ItemGroup TAB = new ItemGroup("titaniummod") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(Items.TITANIUM_INGOT.get());
+        }
+    };
 
     public TitaniumMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -68,9 +75,9 @@ public class TitaniumMod {
     public static class Items {
         private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
         public static final RegistryObject<Item> TITANIUM_BLOCK = ITEMS.register("titanium_block", () -> new BlockItem(Blocks.TITANIUM_BLOCK.get(), new Item.Properties()
-                .tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+                .tab(TitaniumMod.TAB)));
         public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", () -> new Item(new Item.Properties()
-                .tab(ItemGroup.TAB_MATERIALS)));
+                .tab(TitaniumMod.TAB)));
 
         public static void register(IEventBus eventBus) {
             ITEMS.register(eventBus);

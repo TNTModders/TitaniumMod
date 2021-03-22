@@ -10,6 +10,7 @@ public class TitaniumModJaJpLanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
+        add("itemGroup.titaniummod", "チタンMOD");
         add(TitaniumMod.Blocks.TITANIUM_BLOCK.get(), "チタンブロック");
         add(TitaniumMod.Items.TITANIUM_INGOT.get(), "チタンインゴット");
     }
